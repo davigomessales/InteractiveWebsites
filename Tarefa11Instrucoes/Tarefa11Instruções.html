@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Tarefa 11</title>
+</head>
+
+<body>
+    <h1>Teclas de Piano</h1>
+    <p>Você é um desenvolvedor web contratado por uma empresa de educação musical. Este cliente quer que você crie um
+        jogo interativo para ajudar seus alunos iniciantes de piano a estudar. Crie um pianista com eventos DOM em
+        JavaScript!
+    </p>
+    <figure style="display: flex; justify-content: center;">
+        <img src="https://media.giphy.com/media/RccMM7hsUoW4w/giphy.gif" alt="">
+    </figure>
+    <ol>
+        <li>No início do código, temos atribuições de nomes de variáveis para o array <code>keys</code> e o array
+            <code>notes</code>. Há também uma função que percorre os elementos do array keys e os empurra para o array
+            notes.
+            Após o segundo comentário, crie uma função chamada keyPlay que muda a cor de fundo das teclas quando elas
+            são pressionadas.
+            Certifique-se de usar a propriedade <code>.target</code> na função porque o destino está sendo modificado
+            neste caso.
+        </li>
+        <li>A seguir, crie uma função chamada <code>keyReturn</code> que retorne a cor de fundo das teclas ao seu padrão
+            com uma string vazia '' quando o mouse é liberado sobre o elemento. Certifique-se de usar a propriedade
+            <code>.target</code>.
+        </li>
+        <li>Agora que você criou duas funções que alteram a cor dos elementos-chave, você deve atribuí-las como os
+            valores das propriedades do manipulador de eventos.
+            Crie uma função nomeada e deixe o bloco de código em branco por enquanto. Essa função será usada mais tarde
+            para atribuir eventos às teclas, portanto, deve receber um parâmetro — você pode chamá-la de nota.</li>
+        <li>Dentro da função, crie um manipulador de eventos que executa o <code>keyPlay</code> como um manipulador de eventos quando
+            um evento <code>mousedown</code> é acionado em qualquer nota.</li>
+        <li>Dentro da função, crie uma segunda propriedade do manipulador de eventos que executa o <code>keyReturn</code> quando um
+            evento mouseup é acionado em qualquer nota.</li>
+        <li>No início do código, temos atribuições de nomes de variáveis para o array <code>keys</code> e o array vazio <code>notes</code>. Há
+            também uma função percorrendo o array <code>keys</code> e empurrando os elementos <code>keys</code> para o array <code>notes</code> para receber um
+            nome de variável.
+            Agora, você deve criar um loop .forEach que passará os elementos no array notes por meio de sua função de
+            atribuição de evento.</li>
+        <li>Agora, o programa sabe o que fazer quando cada tecla do piano tiver um evento mousedown ou mouseup disparado
+            nela. Execute seu código e veja como funciona!</li>
+        <li>Em seguida, existem variáveis que representam os botões de progresso na caixa de música abaixo que permitem
+            aos alunos progredir no piano.
+            O nextOne, nextTwo, nextThree e startOver mudam a letra e as notas musicais da música para ajudar o aluno a
+            tocar junto. No início da música, o único botão que o aluno precisa é nextOne. Por causa disso, as
+            propriedades .hidden dos outros botões recebem o valor true.
+            Agora você deve criar eventos em todos os botões de progresso. Primeiro, crie uma propriedade do manipulador
+            de eventos com um evento click no elemento nextOne.</li>
+        <li>Para começar a modificar a caixa de música, você deve primeiro alternar os botões de progresso.
+            Usando uma função de manipulador de eventos anônimo, faça as seguintes alterações no botão que aparece
+            depois que <code>nextOne</code> é clicado:
+            <ol>
+                <li>
+                    Revele o botão nextTwo alterando a propriedade <code>.hidden</code> para fazer o botão nextTwo aparecer.
+                </li>
+                <li>
+                    Oculte o botão nextOne alterando a propriedade <code>.hidden</code> para ocultar o botão nextOne.
+                </li>
+            </ol>
+        </li>
+        <li>Em seguida, um evento de clique acionado no nextOne deve alterar as notas musicais que guiam o aluno de
+            piano pela música.
+            Adicione as seguintes alterações à função do manipulador de eventos nextOne para que as notas musicais mudem
+            quando o botão for clicado.
+            Altere o conteúdo do elemento com um ID de letra-nota-cinco para D.
+            Altere o conteúdo do elemento com um ID de letra-nota-seis para C.</li>
+        <li>Crie outra propriedade do manipulador de eventos com um evento click no elemento de botão chamado nextTwo.
+            Em seguida, atribua a propriedade ao valor de uma função de manipulador de eventos anônimo.</li>
+        <li>
+            <ol>Faça as seguintes alterações no botão que aparece quando nextTwo é clicado:
+                <li>
+                    Revele o botão nextThree alterando a propriedade .hidden para fazer o botão nextThree aparecer.
+                </li>
+                <li>
+                    Oculte o botão nextTwo alterando a propriedade .hidden para ocultar o botão nextTwo.
+                </li>
+            </ol>
+        </li>
+        <li>
+            Assim que o aluno chegar a esse ponto da música de feliz aniversário, a letra muda de HAP-PY BIRTH-DAY TO
+            YOU para HAP-PY BIRTH-DAY DEAR FRI-END.
+            Faça as seguintes alterações nas letras na função quando o botão for clicado:
+            <ol>
+                <li>
+                    Altere o conteúdo do elemento com um ID de palavra cinco para DEAR.
+                </li>
+                <li>
+                    Altere o conteúdo do elemento com um ID de word-six para FRI-.
+                </li>
+            </ol>
+        </li>
+        <li>Agora você tem a letra HAP-PY BIRTH-DAY DEAR FRI-. Para terminar a linha, você deve adicionar -END à caixa
+            de música sob o piano.
+
+            O elemento -END é armazenado na variável lastLyric.
+
+            Adicione uma instrução à função do manipulador de eventos para nextTwo que altere a propriedade de exibição
+            de lastLyric para 'inline-block'.</li>
+        <li>
+            A click event firing on the second button must also change the music notes to guide the piano student
+            through the song.
+
+            Add the following changes to the nextTwo event handler function so the musical notes change when the button
+            is clicked:
+
+            <ol>
+                <li>
+                    Change the content of the element with an ID of letter-note-three to G.
+                </li>
+                <li>
+                    Change the content of the element with an ID of letter-note-four to E.
+                </li>
+                <li>
+                    Change the content of the element with an ID of letter-note-five to C.
+                </li>
+                <li>
+                    Change the content of the element with an ID of letter-note-six to B.
+                </li>
+            </ol>
+        </li>
+        <li>Crie uma propriedade do manipulador de eventos com um evento click no elemento nextThree.</li>
+        <li>Usando uma função de manipulador de eventos anônimo, faça as seguintes alterações no botão que aparece
+            quando nextThree é clicado:
+            <ol>
+                <li>Revele o botão startOver alterando a propriedade .hidden para fazer o botão startOver aparecer.</li>
+                <li>Oculte o botão nextThree alterando a propriedade .hidden para ocultar o botão nextThree.</li>
+            </ol>
+        </li>
+        <li>
+            Adicione as alterações a seguir à função do manipulador de eventos nextThree para que as letras mudem quando
+            esse botão for clicado.
+            <ol>
+                <li>
+                    Altere o conteúdo do elemento com um ID de word-one para HAP-.
+                </li>
+                <li>
+                    Altere o conteúdo do elemento com um ID de word-two para PY.
+                </li>
+                <li>
+                    Altere o conteúdo do elemento com um ID de palavra três para BIRTH.
+                </li>
+                <li>
+                    Altere o conteúdo do elemento com um ID de word-four para DAY
+                </li>
+                <li>
+                    Altere o conteúdo do elemento com um ID de palavra cinco para TO.
+                </li>
+                <li>
+                    Altere o conteúdo do elemento com um ID de palavra seis para VOCÊ!.
+                </li>
+            </ol>
+        </li>
+
+        <li>
+            Adicione as seguintes alterações à função do manipulador de eventos nextThree para que as notas musicais
+            mudem quando o botão for clicado.
+            <ol>
+                <li>Altere o conteúdo do elemento com um ID de letra-nota-um para F.</li>
+                <li>Altere o conteúdo do elemento com um ID de letra-nota-dois para F.</li>
+                <li>Altere o conteúdo do elemento com um ID de letra-nota-três para E.</li>
+                <li>Altere o conteúdo do elemento com um ID de letra-nota-quatro para C.</li>
+                <li>Altere o conteúdo do elemento com um ID de letra-nota-cinco para D.</li>
+                <li>Altere o conteúdo do elemento com um ID de letra-nota-seis para C.</li>
+            </ol>
+        </li>
+        <li>Agora você tem a letra FELIZ ANIVERSÁRIO PARA VOCÊ! -FIM — isso não pode estar certo! Para terminar a linha,
+            você deve se livrar do “-end” na caixa de música.
+            Adicione uma instrução à função do manipulador de eventos para nextThree que altere a propriedade de
+            exibição de lastLyric de volta para 'none'.</li>
+        <li>
+            Parabéns, você completou o Piano Player! Brinque com o piano e a caixa de música para disparar todos os
+            eventos.
+        </li>
+    </ol>
+</body>
+
+</html>
